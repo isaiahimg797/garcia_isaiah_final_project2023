@@ -1,3 +1,4 @@
+from typing import Any
 import pygame as pg
 from pygame.sprite import Sprite
 from pygame.math import Vector2 as vec
@@ -44,11 +45,20 @@ class Player(Sprite):
         if self.rect.top < 0:
             self.rect.top = 0
 
-class Food_Bar(Sprite):
-    def __init__(self, x, y, w, h):
-        Sprite.__init__(self)
-        self.image = pg.Surface((w, h))
-        self.rect = self.image.get_rect()
-        self.rect.x = x
-        self.rect.y = y
-        
+class HealthBar():
+    def __init__(self, x, y, w, h, max_hp, color):
+        self.x = x
+        self.y = y
+        self.w = w
+        self.h = h
+        self.hp = max_hp
+        self.max_hp = max_hp
+        self.color = color
+
+    def draw(self, surface):
+        #calculate health ratio
+        ratio = self.hp / self.max_hp
+        pg.draw.rect(surface, (BLACK), (self.x - 6, self.y - 6, self.w + 12, self.h + 12))
+        pg.draw.rect(surface, (WHITE), (self.x, self.y, self.w, self.h))
+        pg.draw.rect(surface, self.color, (self.x, self.y, self.w * ratio, self.h))
+

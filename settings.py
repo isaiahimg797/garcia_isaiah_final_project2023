@@ -1,7 +1,8 @@
 BLACK = (0,0,0)
 WHITE = (255, 255, 255)
 
-FPS = 10
+FPS = 30
 
 WIDTH = 600
 HEIGHT = 600
+
