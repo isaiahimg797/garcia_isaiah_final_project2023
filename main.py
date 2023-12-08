@@ -28,9 +28,6 @@ def showf1():
 
 # adding an excercise function
 def add():
-    # take the string stored in clicked and apply the it to the label
-    def show(): 
-        label.config( text = clicked.get() )
     # list of excercises
     excercises = [
         "Choose an Exercise", 
@@ -47,16 +44,25 @@ def add():
         "Hack Squat"
     ]       
     clicked = StringVar()
-    clicked.set("Choose an Exercise")  
+    clicked.set("Select an Exercise")  
     drop = OptionMenu(f2 , clicked , *excercises,) 
-    drop.pack()  
-    button = Button( f2 , text = "Add" , command = show).pack()
-    label = Label( f2 , text = " ") 
-    label.pack()
+    drop.pack() 
+    labels = []
+    def create_label():
+        count = len(f2.winfo_children())
+        label = tk.Label(f2, text= " ")
+        label.pack(side="top")
+        labels.append(label)
+        label.pack()
+        label.config( text = clicked.get() )
+    log_button = tk.Button(f2, text="Add", command=create_label)
+    log_button.pack(side="top")
+
+    
 
 # on the first page, create a button to log a workout
 f1 = tk.Frame(win)
-log_button = tk.Button(f1, text="Log Workout", command=showf2)
+log_button = tk.Button(f1, text="Log Workout", width= 10, height= 3, command=showf2, font=('Helvetica bold', 20))
 log_button.pack()
 f1.pack()
 
