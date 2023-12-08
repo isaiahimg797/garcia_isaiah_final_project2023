@@ -14,7 +14,6 @@ from tkinter import *
 import tkinter as tk
 
 win = tk.Tk()
-win.geometry("600x600")
 
 # second page
 def showf2():
@@ -45,35 +44,30 @@ def add():
     ]       
     clicked = StringVar()
     clicked.set("Select an Exercise")  
-    drop = OptionMenu(f2 , clicked , *excercises,) 
-    drop.pack() 
+    drop = OptionMenu(f2 , clicked , *excercises) 
+    drop.pack(side=LEFT) 
     labels = []
     def create_label():
         count = len(f2.winfo_children())
         label = tk.Label(f2, text= " ")
-        label.pack(side="top")
-        labels.append(label)
         label.pack()
+        labels.append(label)
+        label.pack(side=TOP)
         label.config( text = clicked.get() )
+        reps = tk.Entry(f2).pack(side= LEFT)
+        sets = tk.Entry(f2).pack(side= LEFT)
     log_button = tk.Button(f2, text="Add", command=create_label)
-    log_button.pack(side="top")
-
+    log_button.pack(side=LEFT)
     
 
 # on the first page, create a button to log a workout
 f1 = tk.Frame(win)
-log_button = tk.Button(f1, text="Log Workout", width= 10, height= 3, command=showf2, font=('Helvetica bold', 20))
+log_button = tk.Button(f1, text="Log Workout", command=showf2, font=('Helvetica bold', 20))
 log_button.pack()
 f1.pack()
 
 # setup page two
 f2 = tk.Frame(win)
-
 add()
-
-
-
-
-
 
 win.mainloop()
