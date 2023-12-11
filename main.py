@@ -49,23 +49,22 @@ def add():
     labels = []
     # when add button is pressed, log the name of excercise, # of reps, etc
     def create_label():
-        r += 1
-        # count = len(f2.winfo_children())
+        count = len(f2.winfo_children())
         label = tk.Label(f2, text= " ")
-        label.grid(row=r, column=2)
+        label.grid(row=2 + 2*count, column=1)
         labels.append(label)
-        label.grid(row=r, column=2)
-        label.config( text = clicked.get() )
+        label.grid(row=2 + 2*count, column=1)
+        label.config(text = clicked.get())
         reps_label = tk.Label(f2, text= "Reps")
         weight_label = tk.Label(f2, text= "Weight")
         reps = tk.Entry(f2, width=5)
         weight = tk.Entry(f2, width=5)
-        reps_label.grid(row=r, column=4)
-        weight_label.grid(row=r, column=5)
-        reps.grid(row=r+1, column=4)
-        weight.grid(row=r+1, column=5)
+        reps_label.grid(row=2 + 2*count, column=2)
+        weight_label.grid(row=2 + 2*count, column=3)
+        reps.grid(row=3 + 2*count, column=2)
+        weight.grid(row=3 + 2*count, column=3)
     log_button = tk.Button(f2, text="Add", command=create_label)
-    log_button.grid(row=2, column=1)
+    log_button.grid(row=1, column=2)
     
 
 # on the first page, create a button to log a workout
