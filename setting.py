@@ -18,3 +18,7 @@ excercises = [
     "Hamstring Curls",
     "Hack Squat"
 ]       
+
+labels = []
+reps_list = []
+weight_list = []
