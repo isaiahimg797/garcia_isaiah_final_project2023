@@ -98,14 +98,17 @@ def add():
 def save():
     # format of the date and time string
     dt_string = datetime.now().strftime("%m/%d/%Y %H:%M") 
-    # in the text file, write the date and time, the set number, the current text in the dropdown menu, and the #s in the entry boxes
+    # in the text file, write:
+        # date and time
+        # set number - from list of labels
+        # reps - takes the input from the entry box
+        # how much weight - also take the input from the entry box
     file.writelines(f"{dt_string}, Set: {str(count)}, {current_label.cget('text')}, Reps: {reps.get()}, Lbs: {weight.get()} \n")
     # update the text file
     file.flush()
     os.fsync(file.fileno())
     # close the text file
     file.close
-    # delete the save button
     done_button.destroy()
 
 # this doesn't work right now
