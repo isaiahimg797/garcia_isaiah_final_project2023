@@ -19,4 +19,5 @@ excercises = [
     "Hack Squat"
 ]       
 
+# empty list to keep track of the amount of sets
 labels = []
