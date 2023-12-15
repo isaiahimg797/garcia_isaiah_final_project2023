@@ -19,6 +19,4 @@ excercises = [
     "Hack Squat"
 ]       
 
-label_list = []
-reps_list = []
-weight_list = []
+labels = []
