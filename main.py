@@ -1,9 +1,9 @@
 # This code was created by Isaiah Garcia
 # Sources:
     # Chris Cozort
-    # https://www.dvlv.co.uk/pages/the-tkinter-cookbook.html
-    # https://www.geeksforgeeks.org/python-gui-tkinter/
-    # https://www.geeksforgeeks.org/reading-writing-text-files-python/
+    #  Dvlv - https://www.dvlv.co.uk/pages/the-tkinter-cookbook.html
+    # Sandeep Jain - Geeks for geeks - https://www.geeksforgeeks.org/python-gui-tkinter/
+    #   https://www.geeksforgeeks.org/reading-writing-text-files-python/
     # https://www.programiz.com/python-programming/datetime/current-datetime
 
 # Goals:
@@ -21,7 +21,8 @@ import os
 
 win = tk.Tk()
 # opens the text file that the data will be stored in
-file = open(r"C:\Users\Isaiah.Garcia25\OneDrive - Bellarmine College Preparatory\Desktop\Computer Programming\Code\garcia_isaiah_final_project2023\garcia_isaiah_final_project2023\saves.txt", "a+")
+# file = open(r"C:\Users\Isaiah.Garcia25\OneDrive - Bellarmine College Preparatory\Desktop\Computer Programming\Code\garcia_isaiah_final_project2023\garcia_isaiah_final_project2023\saves.txt", "a+")
+file = open("saves", "a+")
 
 # move to second page command
 def showf2():

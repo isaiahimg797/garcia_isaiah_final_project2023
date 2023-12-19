@@ -1,6 +1,0 @@
-12/14/2023 20:16, Set: 1, Dumbell Bench Press, Reps: 10, Lbs: 165 
-12/14/2023 20:16, Set: 2, Dumbell Bench Press, Reps: 10, Lbs: 155 
-12/14/2023 20:16, Set: 3, Dumbell Bench Press, Reps: 10, Lbs: 135 
-12/14/2023 20:21, Set: 1, Lat Pulldown, Reps: 10, Lbs: 165 
-12/14/2023 20:21, Set: 2, Lat Pulldown, Reps: 10, Lbs: 155 
-12/14/2023 20:21, Set: 3, Lat Pulldown, Reps: 10, Lbs: 145 
